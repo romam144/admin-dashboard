@@ -1,0 +1,283 @@
+:root{
+    --main-color:#F39C12;
+}
+
+body{
+    background-color: #D7DBDD;
+    margin: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1.3fr 3.5fr 1.5fr;
+    grid-template-rows: 1fr  0.6fr 5fr;
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+/*Navigation bar*/
+.nav{
+    background-color: white;
+    grid-row: 1/2;
+    grid-column: 2/4;
+    box-shadow: 0px 3px 10px;
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    min-height: 100px;
+}
+
+.searchbar{
+    position: relative;
+    top: 25%;
+    height: 50px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    opacity: 0.4;
+}
+
+::placeholder{
+    position: relative;
+    font-weight: bold;
+    color: white;
+    left: 20px;
+}
+
+.user{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    top: 25%;
+    gap: 10%;
+    right: 35%;
+}
+
+#notif , #dash{
+    position: relative;
+    top: 10px;
+}
+
+/*Buttons row*/
+.buttons-row{
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    justify-content: right;
+    gap: 2%;
+    grid-column: 2/4;
+    margin-right: 30px;
+    position: relative;
+    top: 20px; 
+}
+
+
+/*Sidebar*/
+.sidebar{
+    background-color:var(--main-color);
+    grid-row:1/4;
+    display: grid;
+    grid-template-rows: 150px 400px 240px;
+    min-width: 250px;
+    gap: 50px;
+
+}
+.sidebar > div{
+    margin-left: 15%;
+}
+
+.dashboard{
+    font-size: 2.5vh;
+    font-weight: bold;
+}
+
+.options{
+    display: grid;
+    grid-template-rows: repeat(5,70px);
+}
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+
+
+
+/*Projects*/
+.projects{
+    position: relative;
+    grid-column: 2/3;
+    top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(400px,0.5fr));
+    grid-template-rows: repeat(auto-fit, 250px);
+    gap: 30px;
+    padding: 50px;
+}
+
+
+
+/*Card Style*/
+.card{
+    background-color: white;
+    width: 0.5fr;
+    height: 250px;
+    border-radius: 20px;
+    border-left: 10px solid black;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+
+.card > div > h2{
+    font-size: 20px;
+    margin-left: 20px;
+    position: relative;
+    top: 5%;
+}
+
+.card > div > p{
+    margin-left: 20px;
+    font-size: 18px;
+    width: 65%;
+}
+
+.card-icons{
+    display: grid;
+    grid-template-columns: repeat(3, 30px);
+    gap: 10px;
+    position: relative;
+    margin-right: 10px;
+    height: 40px;
+    width: 110px;
+    justify-self: right;
+    justify-content: right;
+}
+
+
+
+
+/*Right side-data*/
+
+.right-data{
+    height: 1200px;
+    display: grid;
+    grid-template-rows: repeat(2, 450px);
+    gap: 100px;
+    position: relative;
+    top: 20px;
+    justify-content: center;
+}
+
+.announcements{
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(3,1fr);
+}
+
+#first-section{
+
+    border: none;
+}
+
+.announcements > section{
+    padding-top: 10px;
+    width: 75%;
+    margin-left: 30px;
+    border-top: 1px solid black;
+}
+
+.announcements,
+.trend-users{
+    background-color: white;
+    height: 450px;
+    width: 350px;
+    border-radius: 20px;
+}
+
+.trend-users{
+    display: grid;
+    gap: 10px;
+    grid-template-rows: repeat(4,1fr);
+}
+
+.trend-users > section{
+    display: flex;
+    gap: 15px;
+}
+
+.trend-users > section > div:nth-child(2){
+    position: relative;
+    bottom: 10%;
+
+}
+
+h4{
+    font-size: 17px;
+    position: relative;
+    top: 20%;
+}
+
+
+
+
+/**/
+img{
+    height: 25px;
+    width: 25px;
+}
+
+img[src*='user']{
+    height: 60px;
+    width: 60px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+
+a{
+    position: relative;
+    bottom: 5px ;
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+input{
+    margin: auto;
+    width: 70%;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
+    
+}
+
+button{
+    height: 50px;
+    width: 130px;
+    border-radius: 15px;
+    background-color: var(--main-color);
+    border:none;
+    cursor: pointer;
+    box-shadow: 1px 2px 2px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover{
+    transform: translateX(1px) translateY(1px);
+    opacity: 0.95;
+}
+
+span{
+    opacity: 0.7;
+    font-weight: bold;
+}
